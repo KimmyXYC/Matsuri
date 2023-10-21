@@ -106,11 +106,6 @@ class MainActivity : ThemedActivity(),
         if (intent?.action == Intent.ACTION_VIEW) {
             onNewIntent(intent)
         }
-
-        if (!BuildConfig.DEBUG && Locale.getDefault().country.lowercase() != "cn") {
-            MoeAd.initialize(this)
-            MoeAd.showBannerAd(binding.coordinator)
-        }
     }
 
     override fun onNewIntent(intent: Intent) {
